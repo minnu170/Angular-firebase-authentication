@@ -82,19 +82,7 @@ export class AuthService {
 
   GoogleAuth() {
  
-    return this.AuthLogin(new firebase.auth.GoogleAuthProvider());
-  }
-
-  AuthLogin(provider) {
-    return this.afAuth.signInWithPopup(provider)
-    .then((result) => {
-       this.ngZone.run(() => {
-          this.router.navigate(['login']);
-        })
-      this.SetUserData(result.user);
-    }).catch((error) => {
-      window.alert(error)
-    })
+    this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   SetUserData(user) {

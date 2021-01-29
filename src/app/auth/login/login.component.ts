@@ -16,7 +16,4 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  googleSignUp() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  }
 }

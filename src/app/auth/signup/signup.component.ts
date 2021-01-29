@@ -31,9 +31,6 @@ export class SignupComponent implements OnInit{
     });
 
   }
-  login() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  }
   logout() {
     this.auth.signOut();
   }
