@@ -1,0 +1,71 @@
+
+    <!-- <div class="title">
+        Create account
+    </div>
+   <span class="text">Already have account? </span> 
+   <a class="link" routerLink="">login</a>
+  <form name="registerForm" [formGroup]="registerForm" novalidate>
+      <input type="text" formControlName="fullName" placeholder="Full Name">
+      <span *ngIf="registerForm.get('fname').errors?.required">Full Name is required</span>
+      <br>
+      <input type="email" formControlName="email" placeholder="Email">
+      <span *ngIf="registerForm.get('email').errors?.required">Email is required</span>
+      <input type="password" formControlName="password" placeholder="Password">
+      <span *ngIf="registerForm.get('password').errors?.required">Email is required</span>
+      <input type="password" formControlName="passwordConfirm" placeholder="Confirm Password">
+      <span *ngIf="registerForm.get('passwordConfirm').errors?.required">Email is required</span> -->
+      <!-- <checkbox name="terms" required>
+        By creating an account, you agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+      </checkbox> -->
+      <!-- <button type="button">SIGN UP</button>
+      <button (click)="login()">Login with Google</button>
+  </form> -->
+
+
+
+  <div class="displayTable">
+    <div class="displayTableCell">
+  
+      <div class="authBlock">
+        <h3>Sign Up</h3>
+  
+        <div class="formGroup">
+          <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPwd required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="btn btnPrimary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        </div>
+  
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+  
+        <!-- Continue with Google -->
+        <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="login()">
+            <i class="fab fa-google-plus-g"></i>
+            Continue with Google
+          </button>
+        </div>
+  
+        <!-- Continue with Facebook -->
+        <!-- <div class="formGroup">
+          <button type="button" class="btn facebookBtn" (click)="authService.FacebookAuth()">
+            <i class="fab fa-facebook"></i>
+            Continue with Facebook
+          </button>
+        </div>
+      </div> -->
+  
+      <div class="redirectToLogin">
+        <span>Already have an account? <span class="redirect" routerLink="/login">Log In</span></span>
+      </div>
+    </div>
+  
+  </div>
+
